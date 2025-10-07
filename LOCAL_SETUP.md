@@ -1,4 +1,4 @@
-# Local Development Setup test
+# Local Development Setup
 
 
 ## Prerequisites
