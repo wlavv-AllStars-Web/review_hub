@@ -36,45 +36,45 @@ export default function ReviewsDisplay() {
   }, []);
 
   return (
-    <div className="min-h-screen py-8 px-4 bg-background">
+    <div className="min-h-screen py-8 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-4">
-            <Link href="/" data-testid="link-back">
-              <Button variant="outline" size="sm">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back
-              </Button>
-            </Link>
-            <h1 className="text-3xl font-bold text-foreground" data-testid="title">
-              Customer Reviews
-            </h1>
-          </div>
-          <a 
-            href="https://www.trustpilot.com/evaluate/all-stars-motorsport.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="link-leave-review"
-          >
-            <Button className="w-full bg-[#04da8d] hover:bg-[#009a67] text-white">
-              <Star className="w-4 h-4 mr-2" />
-              Leave a Review
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </Button>
-          </a>
-        </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 sm:gap-6 mb-8 w-full">
+  <div className="flex items-center gap-4">
+    <Link href="/" data-testid="link-back">
+      <Button variant="outline" size="sm">
+        <ArrowLeft className="w-4 h-4 mr-2" />
+        Back
+      </Button>
+    </Link>
+    <h1 className="text-2xl sm:text-3xl font-bold text-foreground truncate" data-testid="title">
+      Customer Reviews
+    </h1>
+  </div>
+  <a 
+    href="https://www.trustpilot.com/evaluate/all-stars-motorsport.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-testid="link-leave-review"
+    className="w-full sm:w-auto"
+  >
+    <Button className="w-full sm:w-auto whitespace-nowrap bg-[#04da8d] hover:bg-[#009a67] text-white">
+      <Star className="w-4 h-4 mr-2" />
+      Leave a Review
+      <ExternalLink className="w-4 h-4 ml-2" />
+    </Button>
+  </a>
+</div>
 
         {/* Trustpilot Company Info Widget */}
         <Card className="mb-8 shadow-sm">
           <CardHeader>
             <CardTitle className="flex items-center gap-3">
               <img 
-                src="https://cdn.worldvectorlogo.com/logos/stars-5-1.svg" 
+                src="https://www.socialbuzzing.co.uk/wp-content/uploads/2021/06/The-Importance-Of-Online-Reviews-And-What-Social-Buzzing-Trust-Pilot-Reviews-Mean-For-Our-Clients.png" 
                 alt="Trustpilot" 
-                className="w-24 h-18"
-              />
-              All-Stars Motorsport on Trustpilot
+                className="w-24 h-18"/>
+              All-Stars Motorsport
             </CardTitle>
           </CardHeader>
           <CardContent>

@@ -257,7 +257,7 @@ export default function Review() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className="text-2xl" data-testid="title-trustpilot">
-                  Leave a Review on Trustpilot
+                  Leave a Review
                 </CardTitle>
                 <Link href="/reviews" data-testid="link-view-reviews">
                   <Button variant="outline" size="sm">
@@ -272,9 +272,9 @@ export default function Review() {
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0">
                     <img
-                      src="https://cdn.worldvectorlogo.com/logos/stars-5-1.svg"
+                      src="https://www.socialbuzzing.co.uk/wp-content/uploads/2021/06/The-Importance-Of-Online-Reviews-And-What-Social-Buzzing-Trust-Pilot-Reviews-Mean-For-Our-Clients.png"
                       alt="Trustpilot"
-                      className="w-12 h-6"
+                      className="w-25 h-12"
                     />
                   </div>
                   <div className="flex-1">
