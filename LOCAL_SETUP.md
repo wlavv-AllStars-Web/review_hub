@@ -1,5 +1,6 @@
 # Local Development Setup
 
+
 ## Prerequisites
 - Node.js 18+ installed
 - PostgreSQL database (local or cloud like Neon/Supabase)
