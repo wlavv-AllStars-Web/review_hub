@@ -1,0 +1,190 @@
+logo.trustpilot.com/trustpilot-logo.svg:1  GET https://logo.trustpilot.com/trustpilot-logo.svg net::ERR_NAME_NOT_RESOLVED
+Image
+ch @ index-B6zY70yU.js:40
+Ag @ index-B6zY70yU.js:40
+C1 @ index-B6zY70yU.js:40
+R1 @ index-B6zY70yU.js:40
+Tr @ index-B6zY70yU.js:40
+Og @ index-B6zY70yU.js:40
+T @ index-B6zY70yU.js:25
+O @ index-B6zY70yU.js:25
+index-B6zY70yU.js:48  POST https://yourvoicehub.com/api/trustpilot/invitation 404 (Not Found)
+Rh @ index-B6zY70yU.js:48
+mutationFn @ index-B6zY70yU.js:166
+fn @ index-B6zY70yU.js:48
+m @ index-B6zY70yU.js:48
+start @ index-B6zY70yU.js:48
+execute @ index-B6zY70yU.js:48
+await in execute
+mutate @ index-B6zY70yU.js:48
+T @ index-B6zY70yU.js:166
+Jy @ index-B6zY70yU.js:37
+Xy @ index-B6zY70yU.js:37
+Zy @ index-B6zY70yU.js:37
+Df @ index-B6zY70yU.js:37
+Mm @ index-B6zY70yU.js:37
+(anonymous) @ index-B6zY70yU.js:37
+Sd @ index-B6zY70yU.js:40
+om @ index-B6zY70yU.js:37
+Vl @ index-B6zY70yU.js:37
+Yc @ index-B6zY70yU.js:37
+mw @ index-B6zY70yU.js:37
+index-B6zY70yU.js:48 Uncaught (in promise) Error: 404: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /api/trustpilot/invitation</pre>
+</body>
+</html>
+
+    at cv (index-B6zY70yU.js:48:32724)
+    at async Rh (index-B6zY70yU.js:48:32925)
+    at async Object.mutationFn (index-B6zY70yU.js:166:39511)
+cv @ index-B6zY70yU.js:48
+await in cv
+Rh @ index-B6zY70yU.js:48
+await in Rh
+mutationFn @ index-B6zY70yU.js:166
+fn @ index-B6zY70yU.js:48
+m @ index-B6zY70yU.js:48
+start @ index-B6zY70yU.js:48
+execute @ index-B6zY70yU.js:48
+await in execute
+mutate @ index-B6zY70yU.js:48
+T @ index-B6zY70yU.js:166
+Jy @ index-B6zY70yU.js:37
+Xy @ index-B6zY70yU.js:37
+Zy @ index-B6zY70yU.js:37
+Df @ index-B6zY70yU.js:37
+Mm @ index-B6zY70yU.js:37
+(anonymous) @ index-B6zY70yU.js:37
+Sd @ index-B6zY70yU.js:40
+om @ index-B6zY70yU.js:37
+Vl @ index-B6zY70yU.js:37
+Yc @ index-B6zY70yU.js:37
+mw @ index-B6zY70yU.js:37
+index-B6zY70yU.js:166 Processing file: KINETIX ASD LOGO.jpg image/jpeg 1345
+index-B6zY70yU.js:166 Checking Supabase storage buckets...
+index-B6zY70yU.js:166 Available buckets: []
+index-B6zY70yU.js:166 Storage bucket "review-files" does not exist. Attempting to create via server...
+index-B6zY70yU.js:166  POST https://yourvoicehub.com/api/storage/init 404 (Not Found)
+DE @ index-B6zY70yU.js:166
+await in DE
+vp @ index-B6zY70yU.js:166
+S @ index-B6zY70yU.js:166
+await in S
+Jy @ index-B6zY70yU.js:37
+Xy @ index-B6zY70yU.js:37
+Zy @ index-B6zY70yU.js:37
+Df @ index-B6zY70yU.js:37
+Mm @ index-B6zY70yU.js:37
+(anonymous) @ index-B6zY70yU.js:37
+Sd @ index-B6zY70yU.js:40
+om @ index-B6zY70yU.js:37
+Vl @ index-B6zY70yU.js:37
+Yc @ index-B6zY70yU.js:37
+mw @ index-B6zY70yU.js:37
+index-B6zY70yU.js:166 Could not reach server to create bucket: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+DE @ index-B6zY70yU.js:166
+await in DE
+vp @ index-B6zY70yU.js:166
+S @ index-B6zY70yU.js:166
+await in S
+Jy @ index-B6zY70yU.js:37
+Xy @ index-B6zY70yU.js:37
+Zy @ index-B6zY70yU.js:37
+Df @ index-B6zY70yU.js:37
+Mm @ index-B6zY70yU.js:37
+(anonymous) @ index-B6zY70yU.js:37
+Sd @ index-B6zY70yU.js:40
+om @ index-B6zY70yU.js:37
+Vl @ index-B6zY70yU.js:37
+Yc @ index-B6zY70yU.js:37
+mw @ index-B6zY70yU.js:37
+index-B6zY70yU.js:166 Error processing file: KINETIX ASD LOGO.jpg Error: File storage is not properly configured. The storage bucket needs to be created. Please contact your administrator to set up the "review-files" bucket in Supabase Storage.
+    at vp (index-B6zY70yU.js:166:35478)
+    at async S (index-B6zY70yU.js:166:41597)
+S @ index-B6zY70yU.js:166
+await in S
+Jy @ index-B6zY70yU.js:37
+Xy @ index-B6zY70yU.js:37
+Zy @ index-B6zY70yU.js:37
+Df @ index-B6zY70yU.js:37
+Mm @ index-B6zY70yU.js:37
+(anonymous) @ index-B6zY70yU.js:37
+Sd @ index-B6zY70yU.js:40
+om @ index-B6zY70yU.js:37
+Vl @ index-B6zY70yU.js:37
+Yc @ index-B6zY70yU.js:37
+mw @ index-B6zY70yU.js:37
+index-B6zY70yU.js:166 Checking Supabase storage buckets...
+index-B6zY70yU.js:166 Available buckets: []
+index-B6zY70yU.js:166 Storage bucket "review-files" does not exist. Attempting to create via server...
+index-B6zY70yU.js:166  POST https://yourvoicehub.com/api/storage/init 404 (Not Found)
+DE @ index-B6zY70yU.js:166
+await in DE
+vp @ index-B6zY70yU.js:166
+S @ index-B6zY70yU.js:166
+await in S
+Jy @ index-B6zY70yU.js:37
+Xy @ index-B6zY70yU.js:37
+Zy @ index-B6zY70yU.js:37
+Df @ index-B6zY70yU.js:37
+Mm @ index-B6zY70yU.js:37
+(anonymous) @ index-B6zY70yU.js:37
+Sd @ index-B6zY70yU.js:40
+om @ index-B6zY70yU.js:37
+Vl @ index-B6zY70yU.js:37
+Yc @ index-B6zY70yU.js:37
+mw @ index-B6zY70yU.js:37
+index-B6zY70yU.js:166 Could not reach server to create bucket: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+DE @ index-B6zY70yU.js:166
+await in DE
+vp @ index-B6zY70yU.js:166
+S @ index-B6zY70yU.js:166
+await in S
+Jy @ index-B6zY70yU.js:37
+Xy @ index-B6zY70yU.js:37
+Zy @ index-B6zY70yU.js:37
+Df @ index-B6zY70yU.js:37
+Mm @ index-B6zY70yU.js:37
+(anonymous) @ index-B6zY70yU.js:37
+Sd @ index-B6zY70yU.js:40
+om @ index-B6zY70yU.js:37
+Vl @ index-B6zY70yU.js:37
+Yc @ index-B6zY70yU.js:37
+mw @ index-B6zY70yU.js:37
+index-B6zY70yU.js:166 Failed to upload even original file: KINETIX ASD LOGO.jpg Error: File storage is not properly configured. The storage bucket needs to be created. Please contact your administrator to set up the "review-files" bucket in Supabase Storage.
+    at vp (index-B6zY70yU.js:166:35478)
+    at async S (index-B6zY70yU.js:166:41940)
+S @ index-B6zY70yU.js:166
+await in S
+Jy @ index-B6zY70yU.js:37
+Xy @ index-B6zY70yU.js:37
+Zy @ index-B6zY70yU.js:37
+Df @ index-B6zY70yU.js:37
+Mm @ index-B6zY70yU.js:37
+(anonymous) @ index-B6zY70yU.js:37
+Sd @ index-B6zY70yU.js:40
+om @ index-B6zY70yU.js:37
+Vl @ index-B6zY70yU.js:37
+Yc @ index-B6zY70yU.js:37
+mw @ index-B6zY70yU.js:37
+index-B6zY70yU.js:166 Upload error: Error: Failed to upload KINETIX ASD LOGO.jpg: File storage is not properly configured. The storage bucket needs to be created. Please contact your administrator to set up the "review-files" bucket in Supabase Storage.
+    at S (index-B6zY70yU.js:166:42101)
+S @ index-B6zY70yU.js:166
+await in S
+Jy @ index-B6zY70yU.js:37
+Xy @ index-B6zY70yU.js:37
+Zy @ index-B6zY70yU.js:37
+Df @ index-B6zY70yU.js:37
+Mm @ index-B6zY70yU.js:37
+(anonymous) @ index-B6zY70yU.js:37
+Sd @ index-B6zY70yU.js:40
+om @ index-B6zY70yU.js:37
+Vl @ index-B6zY70yU.js:37
+Yc @ index-B6zY70yU.js:37
+mw @ index-B6zY70yU.js:37
