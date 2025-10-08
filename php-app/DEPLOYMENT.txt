@@ -1,0 +1,106 @@
+========================================
+ALL-STARS MOTORSPORT PHP DEPLOYMENT GUIDE
+========================================
+
+SYSTEM REQUIREMENTS:
+- PHP 7.4 or higher
+- PostgreSQL database access
+- Apache/Nginx with mod_rewrite enabled
+- cURL extension enabled
+
+========================================
+INSTALLATION STEPS:
+========================================
+
+1. UPLOAD FILES TO CPANEL:
+   - Upload all files from php-app/ folder to your web root (e.g., public_html/)
+   - Keep the directory structure intact:
+     ├── index.php
+     ├── app.js
+     ├── config.php
+     ├── .htaccess
+     ├── api/
+     │   ├── reviews.php
+     │   ├── trustpilot.php
+     │   └── upload.php
+
+2. CREATE .ENV FILE:
+   - Copy .env.example to .env
+   - Fill in your database and Supabase credentials:
+   
+   DATABASE_URL=postgresql://user:password@host:5432/dbname
+   VITE_SUPABASE_URL=https://your-project.supabase.co
+   VITE_SUPABASE_ANON_KEY=your-anon-key-here
+
+3. CREATE DATABASE TABLES:
+   Run this SQL in your PostgreSQL database:
+   
+   CREATE TABLE IF NOT EXISTS reviews (
+       id VARCHAR(255) PRIMARY KEY DEFAULT gen_random_uuid()::text,
+       review_text TEXT NOT NULL,
+       rating INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
+       files JSONB DEFAULT '[]'::jsonb,
+       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+   );
+
+4. CREATE SUPABASE STORAGE BUCKET:
+   - Go to Supabase Dashboard > Storage
+   - Create new bucket named: "review-files"
+   - Make it PUBLIC
+   - Set appropriate policies for anonymous uploads
+
+5. VERIFY PERMISSIONS:
+   - Ensure PHP can read .env file (chmod 644 .env)
+   - Ensure web server can execute PHP files
+
+6. TEST THE APPLICATION:
+   - Visit: https://yourdomain.com
+   - Test Trustpilot form submission
+   - Test image upload
+
+========================================
+FEATURES:
+========================================
+
+✅ Trustpilot review link generation
+✅ Image/video upload (max 5 files, 10MB each)
+✅ Supabase Storage integration
+✅ PostgreSQL database storage
+✅ Social media links (Facebook, Instagram, TikTok, WhatsApp)
+✅ Responsive mobile-friendly design
+✅ No Node.js required - pure PHP!
+
+========================================
+TROUBLESHOOTING:
+========================================
+
+1. "Database connection failed":
+   - Check DATABASE_URL in .env
+   - Verify PostgreSQL is running
+   - Check SSL settings if using Supabase
+
+2. "Upload failed":
+   - Verify Supabase credentials in .env
+   - Create "review-files" bucket in Supabase
+   - Check bucket is public
+
+3. "500 Internal Server Error":
+   - Check PHP error logs
+   - Verify .htaccess is working
+   - Check file permissions
+
+4. "API not found":
+   - Ensure mod_rewrite is enabled
+   - Check .htaccess file exists
+   - Verify API folder structure
+
+========================================
+SUPPORT:
+========================================
+
+For issues or questions:
+- Check PHP error logs in cPanel
+- Verify all environment variables are set
+- Ensure database tables are created correctly
+
+========================================
