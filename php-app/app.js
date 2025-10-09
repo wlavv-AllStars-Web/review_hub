@@ -61,9 +61,18 @@ trustpilotForm.addEventListener('submit', async (e) => {
         invitationUrl = data.invitationUrl;
         
         showSuccess(trustpilotSuccess, `
-            <div>✅ Success! Your Trustpilot review link has been generated</div>
-            <button onclick="openTrustpilotReview()" style="background: white; color: #10b981; border: none; padding: 0.5rem 1rem; border-radius: 0.375rem; margin-top: 0.5rem; cursor: pointer; font-weight: 500;">
-                Open Trustpilot Review
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <svg style="width: 1.5rem; height: 1.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span style="font-weight: 600;">Ready to leave your review!</span>
+            </div>
+            <p style="font-size: 0.875rem; margin-bottom: 0.75rem;">Click the button below to review All-Stars Motorsport on Trustpilot</p>
+            <button onclick="openTrustpilotReview()" class="review-button">
+                <span>⭐</span> Review on Trustpilot
+                <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
             </button>
         `);
         

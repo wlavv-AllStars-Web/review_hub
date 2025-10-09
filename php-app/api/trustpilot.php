@@ -29,10 +29,8 @@ if (!filter_var($customerEmail, FILTER_VALIDATE_EMAIL)) {
     jsonResponse(['error' => 'Invalid email address'], 400);
 }
 
-// Generate Trustpilot invitation URL
-// Note: This is a simulated URL. In production, you would use Trustpilot's API
-$businessUnitId = 'your-business-unit-id';
-$invitationUrl = "https://www.trustpilot.com/evaluate/$businessUnitId?" . http_build_query([
+// Generate Trustpilot invitation URL for all-stars-motorsport.com
+$invitationUrl = "https://www.trustpilot.com/evaluate/all-stars-motorsport.com?" . http_build_query([
     'name' => $customerName,
     'email' => $customerEmail,
     'ref' => $referenceId

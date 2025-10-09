@@ -1,8 +1,44 @@
 <?php
+// Load .env file
+function loadEnv($path = __DIR__ . '/.env') {
+    if (!file_exists($path)) {
+        return;
+    }
+    
+    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        // Skip comments
+        if (strpos(trim($line), '#') === 0) {
+            continue;
+        }
+        
+        // Parse KEY=VALUE
+        if (strpos($line, '=') !== false) {
+            list($key, $value) = explode('=', $line, 2);
+            $key = trim($key);
+            $value = trim($value);
+            
+            // Remove quotes if present
+            if ((substr($value, 0, 1) === '"' && substr($value, -1) === '"') ||
+                (substr($value, 0, 1) === "'" && substr($value, -1) === "'")) {
+                $value = substr($value, 1, -1);
+            }
+            
+            // Set environment variable
+            putenv("$key=$value");
+            $_ENV[$key] = $value;
+            $_SERVER[$key] = $value;
+        }
+    }
+}
+
+// Load environment variables
+loadEnv();
+
 // Database configuration
 $database_url = getenv('DATABASE_URL');
 if (!$database_url) {
-    die('DATABASE_URL environment variable is required');
+    die('DATABASE_URL environment variable is required. Please create a .env file with DATABASE_URL, VITE_SUPABASE_URL, and VITE_SUPABASE_ANON_KEY');
 }
 
 // Parse PostgreSQL connection URL

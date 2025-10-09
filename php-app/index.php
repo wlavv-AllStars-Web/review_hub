@@ -13,9 +13,11 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: hsl(0 0% 100%);
             min-height: 100vh;
             padding: 2rem 1rem;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 4px 4px;
         }
 
         .container {
@@ -25,18 +27,19 @@
 
         .header {
             text-align: center;
-            color: white;
+            color: #1f2937;
             margin-bottom: 3rem;
         }
 
         .header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            color: #6b7280;
         }
 
         .grid {
@@ -66,30 +69,36 @@
         }
 
         .trustpilot-info {
-            background: #eff6ff;
-            border: 1px solid #dbeafe;
+            background: rgba(4, 218, 141, 0.2);
+            border: 1px solid transparent;
             border-radius: 0.5rem;
             padding: 1rem;
             margin-bottom: 1.5rem;
             display: flex;
             gap: 1rem;
+            align-items: start;
         }
 
         .trustpilot-info img {
-            width: 32px;
-            height: 32px;
+            width: 100px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+
+        .trustpilot-info-text {
+            flex: 1;
         }
 
         .trustpilot-info-text h3 {
             font-size: 0.875rem;
             font-weight: 500;
-            color: #1e40af;
+            color: #005f41;
             margin-bottom: 0.25rem;
         }
 
         .trustpilot-info-text p {
             font-size: 0.75rem;
-            color: #1d4ed8;
+            color: rgba(0, 95, 65, 0.8);
         }
 
         .form-group {
@@ -132,7 +141,7 @@
         .button {
             width: 100%;
             padding: 0.75rem 1.5rem;
-            background: #2563eb;
+            background: #04da8d;
             color: white;
             border: none;
             border-radius: 0.5rem;
@@ -147,7 +156,7 @@
         }
 
         .button:hover {
-            background: #1d4ed8;
+            background: #009a67;
         }
 
         .button:disabled {
@@ -156,11 +165,32 @@
         }
 
         .button-green {
-            background: #10b981;
+            background: #04da8d;
         }
 
         .button-green:hover {
-            background: #059669;
+            background: #009a67;
+        }
+        
+        .button-red {
+            background: #ff8a8a; /* Soft coral pink (matches your image) */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .button-red:hover {
+            background: #ff6b6b; /* Slightly deeper red on hover */
         }
 
         .upload-area {
@@ -222,13 +252,32 @@
         }
 
         .success-message {
-            background: #10b981;
+            background: #16a34a;
             color: white;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 0.5rem;
             text-align: center;
             margin-bottom: 1.5rem;
             display: none;
+        }
+
+        .success-message .review-button {
+            background: white;
+            color: #16a34a;
+            border: none;
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            transition: background 0.2s;
+        }
+
+        .success-message .review-button:hover {
+            background: #f0fdf4;
         }
 
         .success-message.show {
@@ -349,10 +398,10 @@
                 <div id="trustpilot-error" class="error-message"></div>
 
                 <div class="trustpilot-info">
-                    <img src="https://logo.trustpilot.com/trustpilot-logo.svg" alt="Trustpilot">
+                    <img src="https://www.socialbuzzing.co.uk/wp-content/uploads/2021/06/The-Importance-Of-Online-Reviews-And-What-Social-Buzzing-Trust-Pilot-Reviews-Mean-For-Our-Clients.png" alt="Trustpilot">
                     <div class="trustpilot-info-text">
                         <h3>Share your experience with All-Stars Motorsport</h3>
-                        <p>Your review will be published on Trustpilot, helping other customers make informed decisions.</p>
+                        <p>Your review will be published on Trustpilot, helping other customers make informed decisions. We value your honest feedback about our service.</p>
                     </div>
                 </div>
 
@@ -372,14 +421,6 @@
                         <p class="form-hint">This will be used to verify your review on Trustpilot</p>
                     </div>
 
-                    <div class="form-group">
-                        <label class="form-label">
-                            Order/Service Reference (Optional)
-                        </label>
-                        <input type="text" class="form-input" id="reference-id" placeholder="e.g., Order #12345">
-                        <p class="form-hint">Help us identify your specific service or order</p>
-                    </div>
-
                     <button type="submit" class="button" id="trustpilot-submit">
                         <span>⭐</span>
                         Generate My Trustpilot Review Link
@@ -389,14 +430,22 @@
 
             <!-- Image Upload Section -->
             <div class="card">
-                <h2 class="card-title">Share Your Experience with Images</h2>
-                <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1.5rem;">
-                    Upload photos of your project or service experience
-                </p>
+                <div style="display: block; align-items: flex-start; gap: 1rem;">
+                  <img 
+                    src="https://www.all-stars-motorsport.com/img/all-stars-motorsport-logo_invoice-1632499801.jpg" 
+                    alt="Trustpilot" 
+                    style="max-width: 120px; height: auto;"
+                  >
+                  <div>
+                    <h2 class="card-title">Share Your Experience with Images</h2>
+                    <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1.5rem;">
+                      Upload photos of your project or service experience
+                    </p>
+                  </div>
+                </div>
 
                 <div id="image-success" class="success-message"></div>
                 <div id="image-error" class="error-message"></div>
-
                 <form id="image-form">
                     <div class="form-group">
                         <label class="form-label">Upload Your Photos</label>
@@ -410,8 +459,8 @@
                         <div id="file-list" class="file-list"></div>
                     </div>
 
-                    <button type="submit" class="button button-green" id="image-submit">
-                        <span>📤</span>
+                    <button type="submit" class="button-red" id="image-submit">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload w-4 h-4 mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>
                         Upload Photos
                     </button>
                 </form>
