@@ -1,5 +1,23 @@
 <?php
 // Load .env file
+// Démarrer la session si non démarrée
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Détection de la langue du navigateur
+function detectUserLanguageCode() {
+    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '', 0, 2);
+    switch ($lang) {
+        case 'en': return 1; // Anglais
+        case 'es': return 4; // Espagnol
+        case 'fr': return 5; // Français
+        default: return 1;   // Par défaut anglais
+    }
+}
+
+// Stocker le code langue en session
+$_SESSION['userLangCode'] = detectUserLanguageCode();
 function loadEnv($path = __DIR__ . '/.env') {
     if (!file_exists($path)) {
         return;
