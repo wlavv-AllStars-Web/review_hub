@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     let langCode = localStorage.getItem('user_lang');
 
     // 1️⃣ Si l’URL contient ?lang_id=...
-    if (urlParams.has('lang_id')) {
-        langCode = urlParams.get('lang_id');
+    if (urlParams.has('id_lang')) {
+        langCode = urlParams.get('id_lang');
         localStorage.setItem('user_lang', langCode);
     }
 
