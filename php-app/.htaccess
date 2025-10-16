@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# API routes
+RewriteRule ^api/(.*)$ api/$1 [L]
+
+# Static files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect everything else to index.php
+RewriteRule ^.*$ index.php [L,QSA]
