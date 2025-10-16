@@ -398,7 +398,7 @@
                     <img src="https://www.socialbuzzing.co.uk/wp-content/uploads/2021/06/The-Importance-Of-Online-Reviews-And-What-Social-Buzzing-Trust-Pilot-Reviews-Mean-For-Our-Clients.png" alt="Trustpilot">
                     <div class="trustpilot-info-text">
                         <h3 data-translate="Share your experience with All-Stars Motorsport">Share your experience with All-Stars Motorsport</h3>
-                        <p data-translate="Your review will be published on Trustpilot, helping other customers make informed decisions. We value your honest feedback about our service.">Your review will be published on Trustpilot, helping other customers make informed decisions. We value your honest feedback about our service.</p>
+                        <p data-translate="Your review will be published on Trustpilot, helping other customers. We value your honest feedback about your experience">Your review will be published on Trustpilot, helping other customers. We value your honest feedback about your experience.</p>
                     </div>
                 </div>
 
@@ -434,7 +434,7 @@
                   <div>
                     <h2 class="card-title" data-translate="Share Your Experience with Images">Share Your Experience with Images</h2>
                     <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1.5rem;" data-translate="Upload photos of your project or service experience">
-                      Upload photos of your project or service experience
+                      Upload photos of your project or purchase experience
                     </p>
                   </div>
                 </div>
